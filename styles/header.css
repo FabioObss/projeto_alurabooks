@@ -1,0 +1,71 @@
+/**Toda a estilização do HEADER está sendo feita em arquivo CSS separado pq é uma seção da pagina que se repete em todas as outras paginas que o site tem.**/
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /**Habilita o manuseio da posição dos elementos dentro do container. Pode ser usado com Top, bottom,left, right**/
+    padding: 0rem 0.5rem;
+    /**padding adicionado por conta propria p/ espaçar icones**/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__botao {
+    display: none;
+}
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin-left: 0.5rem;      
+}
+
+.container__imagem {
+    padding: 1rem;
+}
+
+.lista-menu { 
+    display: none;/**Menu oculto antes de clicar**/
+    position: absolute; /****/
+    top:100%; /**Aparece abaixo do ElementoPai (cabecalho)**/
+    width: 70vw;
+}
+
+
+.container__botao:checked~ .lista-menu { /**funciona quase como uma funçãoJS, na qual se o checkbox estiver ativo (:checked) ativa o menu da lista (.lista-menu)**/
+    display: block; /**Habilita sua visualização no bloco e posição determinada**/
+}
+
+
+.lista-menu__titulo, .lista-menu__item { 
+    padding: 1rem;
+    background-color: var(--branco);
+} /**Aqui juntamos duas classes na mesma chamada pq são classes que compartilham da mesmas caracteristicas**/
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lista-menu__item a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} /**Codigos adicionais retirados do Design no Figma**/
