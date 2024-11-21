@@ -9,7 +9,7 @@
 }
 
 .swiper-slide img{
-    width: 100%;;
+    width: 100%;
 }
 
 .swiper-pagination {
@@ -94,4 +94,74 @@
 
 .descricao__classificacao {
     margin-bottom: 0.5rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .carrossel__titulo, .carrossel__titulo2 {
+        font-size: 26px;
+        padding: 3.5rem 0 1rem 0;
+    }
+
+    .swiper-pagination {
+        margin: 2rem 0 3rem 0;
+    }
+    
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        display: block;
+        top: 60%;
+    }
+
+/**Configurações visuais do figma nao foram aplicadas 100% por limitações do plugin do carrossel usado na aula. LEMBRANDO: o carrossel é melhor utilizado com JAVASCRIPT**/
+
+    .card {
+        width: 45%;
+        margin: 2rem auto;
+    }
+
+    .botoes__ancora:hover {
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width:1728px) {
+
+    .carrossel__container {
+        display: flex;
+        margin: 0 20vw 3rem 20vw;
+        align-items: center;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .swiper-pagination {
+        margin: 1rem 0;
+}
+
+    .card {
+        margin-top: 4.5rem;
+        width: 60%;
+        margin-left: 4rem;
+    }
+
+    .descricao {
+        margin-right: 2rem;
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+    }
+
+    .descricao__texto {
+        font-size: 16px;
+        margin: 1.5rem 0;
+    }
+
 }

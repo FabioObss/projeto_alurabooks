@@ -1,4 +1,3 @@
-/**Toda a estilização do HEADER está sendo feita em arquivo CSS separado pq é uma seção da pagina que se repete em todas as outras paginas que o site tem.**/
 
 .cabecalho {
     background-color: var(--branco);
@@ -6,8 +5,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative; /**Habilita o manuseio da posição dos elementos dentro do container. Pode ser usado com Top, bottom,left, right**/
-    padding: 0rem 0.5rem;
-    /**padding adicionado por conta propria p/ espaçar icones**/
 }
 
 .container {
@@ -19,14 +16,21 @@
     display: none;
 }
 
+.container__botao:checked~.container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url("../assets/Menu\ Aberto.png");
+} 
+
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
 .cabecalho__menu-hamburguer {
     width: 24px;
     height: 24px;
     background-image: url("../assets/Menu.svg");
     background-repeat: no-repeat;
     background-position: center;
-    display: inline-block;
-    margin-left: 0.5rem;      
+    display: inline-block;          
 }
 
 .container__imagem {
@@ -38,6 +42,7 @@
     position: absolute; /****/
     top:100%; /**Aparece abaixo do ElementoPai (cabecalho)**/
     width: 70vw;
+    z-index: 10; /**<-joga a classe do elemento para frente das outras**/
 }
 
 
@@ -68,4 +73,131 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} /**Codigos adicionais retirados do Design no Figma**/
+} 
+
+/**Atualizações p/ adequar MediaQuaries**/
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+
+
+/**Iniciando Media Queries para tamanho de tela de 1024px**/
+@media screen and (min-width: 1024px) {
+    
+    .container {
+        padding: 0 2rem 0 2rem;
+    }
+
+    .container__imagem {
+        margin-left: 1rem;
+    }
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+        padding-top: 0.5rem;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+
+    .opcoes__item {
+        padding: 1.3rem 1rem ;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+
+    .opcoes__item:hover {
+        background-color: #f2f0f0;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem--transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes__botao {
+        display: none;
+    }
+
+    .opcoes__botao:checked~.opcoes__rotulo >.opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    /**Solução para duplicidade do MENU aberto em res. diferentes**/
+    .container__botao:checked ~ .lista-menu { 
+        display: none; 
+    }
+
+    .opcoes__botao:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    /**SE (.lista-menu-tem)=HOVER ( > chame ) (.lista-menu__link) para alterações**/
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+    }
+
+    
+}
+
+
+
+@media screen and (min-width:1728px) {
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--preto);
+    }
+
+    .cabecalho {
+        padding: 0 2rem;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+}

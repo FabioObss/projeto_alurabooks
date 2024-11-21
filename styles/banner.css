@@ -35,3 +35,42 @@
     background-position: 1.5rem;
     padding-left: 2.5rem; /**margem p/ deslocar texto para direita**/
 }
+
+@media screen and (min-width: 1024px) {
+    
+    .banner {
+        padding: 5rem 0;
+    }
+
+    .banner__titulo {
+        font-size: 36px;
+    }
+
+    .banner__pesquisa {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 7rem;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .banner__pesquisa {
+        width: 30%
+    }
+
+    .banner__pesquisa {
+        font-size: 16px;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 8rem;
+        font-family: var(--fonte-padrao);
+        font-size: 16px;
+}
+
+}

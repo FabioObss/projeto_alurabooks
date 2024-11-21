@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("./header.css");
 @import url("./banner.css");
 @import url("./carrossel.css");
@@ -12,9 +12,13 @@
     --laranja: #EB9B00;
     --azul-degrade: linear-gradient(98deg, #002F52 35.49%, #326589 165.37%);
     --fonte-padrao: "Poppins" , sans-serif;
+    --fonte-secundaria: "Josefin Sans";
     --azul: #002F52;
     --preto: rgba(0, 0, 0, 0.85);
     --cor-rodape: #F9F9F9;
+    --preto: #000000;
+    --cinza: #858585;
+    --cinza-escuro: #474646;
 }
 
 body {
@@ -23,4 +27,4 @@ body {
     font-size: 1rem; /**Ou 16px. Comumente usada na maioria dos projetos web**/
     font-weight: 400; /**Peso de fonte que equivale ao tipo REGULAR**/
 }
-/**Nao esquecer de aplicar já direto no BODY a fote e tamanho que sao padroes do projeto. Ou seja, aquela que está na sua maioria no corpo da pagina. Para evitar retrabalho puxando classes**/
+/**Nao esquecer de aplicar já direto no BODY a fonte e tamanho que sao padroes do projeto. Ou seja, aquela que está na sua maioria no corpo da pagina. Para evitar retrabalho puxando classes**/
